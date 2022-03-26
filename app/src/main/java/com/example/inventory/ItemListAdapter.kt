@@ -44,6 +44,8 @@ class ItemListAdapter(val onItemClicked: (Item) -> Unit) :
 
             override fun areContentsTheSame(oldItem: Item, newItem: Item): Boolean {
                 return oldItem.itemName == newItem.itemName
+                        && oldItem.itemPrice == newItem.itemPrice
+                        && oldItem.quantityInStock == newItem.quantityInStock
             }
 
         }
